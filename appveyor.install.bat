@@ -68,6 +68,11 @@ echo -----------------------------------------------
 echo dir /a:d /b "C:\Program Files (x86)\Microsoft SDKs"
 dir /a:d /b "C:\Program Files (x86)\Microsoft SDKs"
 
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Program Files (x86)\Microsoft SDKs\Windows"
+dir /a:d /b "C:\Program Files (x86)\Microsoft SDKs\Windows"
+
 echo -----------------------------------------------
 echo dir /a:d /b "C:\Program Files\Microsoft SDKs"
 dir /a:d /b "C:\Program Files\Microsoft SDKs"
@@ -80,6 +85,9 @@ echo -----------------------------------------------
 echo dir /a:d /b "C:\Program Files" 
 dir /a:d /b "C:\Program Files"  
 
+
+echo -----------------------------------------------
+
 set ROOT_DIRECTORY=%CD%
 cd %ROOT_DIRECTORY%
 set BOOST_ROOT=C:\Libraries\boost_1_60_0
@@ -91,8 +99,12 @@ set PATH=C:\msys64\mingw64\bin;%PATH%
 
 REM echo useful info
 bash --login -c "env"
+echo -----------------------------------------------
 bash --login -c "echo $PATH"
+
+echo -----------------------------------------------
 bash --login -c "pacman -Q"
+echo -----------------------------------------------
 
 rem bash --login -c "pacman -S --noconfirm python"
 
@@ -253,8 +265,12 @@ set PATH=%QT5%\bin;%PATH%
 ::7z.exe a -t7z -r "Qt_5.15.1_msvc2019.7z" "C:\Qt\5.15.1\msvc2019\*"
 ::appveyor PushArtifact "Qt_5.15.1_msvc2019.7z"
 
-7z.exe a -t7z -r "Qt_5.15.1_msvc2019_64.7z" "C:\Qt\5.15.1\msvc2019_64\*"
-appveyor PushArtifact "Qt_5.15.1_msvc2019_64.7z"
+::7z.exe a -t7z -r "Qt_5.15.1_msvc2019_64.7z" "C:\Qt\5.15.1\msvc2019_64\*"
+::appveyor PushArtifact "Qt_5.15.1_msvc2019_64.7z"
+
+7z.exe a -t7z -r "Qt_Tools_Docs_Examples.7z" "C:\Qt\" -xr!5.12 -xr!5.12.9 -xr!5.13 -xr!5.13.2 -xr!5.14 -xr!5.14.2 -xr!5.15 -xr!5.15.1 -xr!5.9 -xr!5.9.9
+appveyor PushArtifact "Qt_Tools_Docs_Examples.7z"
+
 
 
 :: Android
