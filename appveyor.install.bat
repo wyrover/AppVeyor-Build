@@ -129,6 +129,9 @@ cd /d C:\
 npm install -g tree-node-cli
 
 
+set PATH=C:\Users\%USERNAME%\AppData\Roaming\npm\;%PATH%
+
+
 treee  -L 2 -d -I "node_modules"
 
 echo %BOOST_LIBRARYDIR%
@@ -267,6 +270,8 @@ set PATH=%QT5%\bin;%PATH%
 ::7z.exe a -t7z -r OpenSSL-Win64.7z "C:\OpenSSL-Win64\*"
 ::appveyor PushArtifact OpenSSL-Win64.7z
 
+
+cd /d %APPVEYOR_BUILD_FOLDER%
 
 
 :install_ninja
