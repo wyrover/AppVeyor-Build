@@ -139,7 +139,7 @@ dir /a:d /b "C:\Users\appveyor\AppData\Roaming\npm"
 which tree 
 which treee 
 
-::treee  -L 2 -d -I "node_modules"
+treee  -L 2 -d -I "node_modules" -I "pagefile.sys"
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
