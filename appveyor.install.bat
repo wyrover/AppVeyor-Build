@@ -129,7 +129,12 @@ cd /d C:\
 npm install -g tree-node-cli
 
 
-set PATH=C:\Users\appveyor\AppData\Roaming\npm\;%PATH%
+set PATH=C:\Users\appveyor\AppData\Roaming\npm;%PATH%
+
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Users\appveyor\AppData\Roaming\npm" 
+dir /a:d /b "C:\Users\appveyor\AppData\Roaming\npm"  
 
 which tree 
 which treee 
