@@ -99,8 +99,8 @@ echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
 
 
-if exist "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" ( dir "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" )
-if exist "C:\Program Files\Microsoft SDKs\Windows" ( dir "C:\Program Files\Microsoft SDKs\Windows" )
+::if exist "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" ( dir "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" )
+::if exist "C:\Program Files\Microsoft SDKs\Windows" ( dir "C:\Program Files\Microsoft SDKs\Windows" )
 
 
 rem 7z.exe a -t7z -r qt_5_7_1_msvc2015_64.7z C:\Qt\5.7\msvc2015_64\*
@@ -138,20 +138,24 @@ rem appveyor PushArtifact MinGW.7z
 ::7z.exe a -t7z -r MySQL_5.7.7z "C:\Program Files (x86)\MySQL\*"
 ::appveyor PushArtifact MySQL_5.7.7z
 
-7z.exe a -t7z -r Tools.7z "C:\Tools\*"
-appveyor PushArtifact Tools.7z
+::7z.exe a -t7z -r Tools.7z "C:\Tools\*"
+::appveyor PushArtifact Tools.7z
+
+
+
+:: JDK 
 
 
 
 
-::7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
-::appveyor PushArtifact JDK_1.8_Update_221_(x86).7z
+7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
+appveyor PushArtifact JDK_1.8_Update_221_(x86).7z
 
-::7z.exe a -t7z -r JDK_1.8_Update_221_(x64).7z "C:\Program Files\Java\jdk1.8.0\*"
-::appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
-::
-::7z.exe a -t7z -r JDK_12_(x64).7z "C:\Program Files\Java\jdk12\*"
-::appveyor PushArtifact JDK_12_(x64).7z
+7z.exe a -t7z -r JDK_1.8_Update_221_(x64).7z "C:\Program Files\Java\jdk1.8.0\*"
+appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
+
+7z.exe a -t7z -r JDK_12_(x64).7z "C:\Program Files\Java\jdk14\*"
+appveyor PushArtifact JDK_14_(x64).7z
 
 
 
