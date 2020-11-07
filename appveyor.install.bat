@@ -243,18 +243,46 @@ set PATH=%QT5%\bin;%PATH%
 
 
 :: Qt
-7z.exe a -t7z -r "Qt_5.15.1_mingw81_32.7z" "C:\Qt\5.15.1\mingw81_32\*"
-appveyor PushArtifact "Qt_5.15.1_mingw81_32.7z"
-
-7z.exe a -t7z -r "Qt_5.15.1_mingw81_64.7z" "C:\Qt\5.15.1\mingw81_64\*"
-appveyor PushArtifact "Qt_5.15.1_mingw81_64.7z"
-
-
-7z.exe a -t7z -r "Qt_5.15.1_msvc2019.7z" "C:\Qt\5.15.1\msvc2019\*"
-appveyor PushArtifact "Qt_5.15.1_msvc2019.7z"
+::7z.exe a -t7z -r "Qt_5.15.1_mingw81_32.7z" "C:\Qt\5.15.1\mingw81_32\*"
+::appveyor PushArtifact "Qt_5.15.1_mingw81_32.7z"
+::
+::7z.exe a -t7z -r "Qt_5.15.1_mingw81_64.7z" "C:\Qt\5.15.1\mingw81_64\*"
+::appveyor PushArtifact "Qt_5.15.1_mingw81_64.7z"
+::
+::
+::7z.exe a -t7z -r "Qt_5.15.1_msvc2019.7z" "C:\Qt\5.15.1\msvc2019\*"
+::appveyor PushArtifact "Qt_5.15.1_msvc2019.7z"
 
 7z.exe a -t7z -r "Qt_5.15.1_msvc2019_64.7z" "C:\Qt\5.15.1\msvc2019_64\*"
 appveyor PushArtifact "Qt_5.15.1_msvc2019_64.7z"
+
+
+:: Android
+::7z.exe a -t7z -r "Android.7z" "C:\Program Files (x86)\Android\*"
+::appveyor PushArtifact "Android.7z"
+::
+::7z.exe a -t7z -r "Maven.7z" "C:\Program Files (x86)\Apache\Maven\*"
+::appveyor PushArtifact "Maven.7z"
+::
+::
+::
+:::: Win SDK
+::
+::
+::
+::7z.exe a -t7z -r "Microsoft SDKs v7.1A.7z" "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\*"
+::appveyor PushArtifact "Microsoft SDKs v7.1A.7z"
+::
+::
+:::: MySQL
+::
+::7z.exe a -t7z -r "MySQL Server 5.7.7z" "C:\Program Files\MySQL\MySQL Server 5.7\*"
+::appveyor PushArtifact "MySQL Server 5.7.7z"
+::
+::
+::7z.exe a -t7z -r "PostgreSQL 12.1 x64.7z" "C:\Program Files\PostgreSQL\12\*"
+::appveyor PushArtifact "PostgreSQL 12.1 x64.7z"
+
 
 
 ::
