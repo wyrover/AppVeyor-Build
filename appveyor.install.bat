@@ -138,10 +138,9 @@ dir "C:\Users\appveyor\AppData\Roaming\npm"
 
 
 
-which tree 
-which treee 
 
-npx treee  -L 2 -d -I "pagefile"
+
+treee -l 2 
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
