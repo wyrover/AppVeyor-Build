@@ -154,32 +154,57 @@ set PATH=%QT5%\bin;%PATH%
 ::7z.exe a -t7z -r JDK_1.8_Update_221_(x64).7z "C:\Program Files\Java\jdk1.8.0\*"
 ::appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
 
-7z.exe a -t7z -r JDK_14_(x64).7z "C:\Program Files\Java\jdk14\*"
-appveyor PushArtifact JDK_14_(x64).7z
+::7z.exe a -t7z -r JDK_14_(x64).7z "C:\Program Files\Java\jdk14\*"
+::appveyor PushArtifact JDK_14_(x64).7z
+::
+::
+::7z.exe a -t7z -r "NSIS 3.06.1.7z" "C:\Program Files (x86)\NSIS\*"
+::appveyor PushArtifact "NSIS 3.06.1.7z"
+::
+::7z.exe a -t7z -r "InnoSetup 6.0.2 Unicode.7z" "C:\Program Files (x86)\Inno Setup 6\*"
+::appveyor PushArtifact "InnoSetup 6.0.2 Unicode.7z"
+::
+::
+::7z.exe a -t7z -r "OpenSSL 1.1.1h (64-bit).7z" "C:\OpenSSL-v111-Win64\*"
+::appveyor PushArtifact "OpenSSL 1.1.1h (64-bit).7z"
+::
+::7z.exe a -t7z -r "OpenSSL 1.1.1h (32-bit).7z" "C:\OpenSSL-v111-Win32\*"
+::appveyor PushArtifact "OpenSSL 1.1.1h (32-bit).7z"
+::
+::
+::7z.exe a -t7z -r "OpenSSL 1.0.2u (64-bit).7z" "C:\OpenSSL-Win64\*"
+::appveyor PushArtifact "OpenSSL 1.0.2u (64-bit).7z"
+::
+::
+::7z.exe a -t7z -r "OpenSSL 1.0.2u (32-bit).7z" "C:\OpenSSL-Win32\*"
+::appveyor PushArtifact "OpenSSL 1.0.2u (32-bit).7z"
 
+7z.exe a -t7z -r "boost_1_73_0.7z" "C:\Libraries\boost_1_73_0\*"
+appveyor PushArtifact "boost_1_73_0.7z"
 
-7z.exe a -t7z -r "NSIS 3.06.1.7z" "C:\Program Files (x86)\NSIS\*"
-appveyor PushArtifact "NSIS 3.06.1.7z"
+7z.exe a -t7z -r "LLVM 10.0.0 x64.7z" "C:\Program Files\LLVM\*"
+appveyor PushArtifact "LLVM 10.0.0 x64.7z"
 
-7z.exe a -t7z -r "InnoSetup 6.0.2 Unicode.7z" "C:\Program Files (x86)\Inno Setup 6\*"
-appveyor PushArtifact "InnoSetup 6.0.2 Unicode.7z"
+7z.exe a -t7z -r "DirectX SDK.7z" "C:\Program Files (x86)\Microsoft DirectX SDK\*"
+appveyor PushArtifact "DirectX SDK.7z"
 
+7z.exe a -t7z -r "vcpkg.7z" "C:\Tools\vcpkg\*"
+appveyor PushArtifact "vcpkg.7z"
 
-7z.exe a -t7z -r "OpenSSL 1.1.1h (64-bit).7z" "C:\OpenSSL-v111-Win64\*"
-appveyor PushArtifact "OpenSSL 1.1.1h (64-bit).7z"
+7z.exe a -t7z -r "Doxygen.7z" "C:\Tools\Doxygen\*"
+appveyor PushArtifact "Doxygen.7z"
 
-7z.exe a -t7z -r "OpenSSL 1.1.1h (32-bit).7z" "C:\OpenSSL-v111-Win32\*"
-appveyor PushArtifact "OpenSSL 1.1.1h (32-bit).7z"
+7z.exe a -t7z -r "Graphviz.7z" "C:\Tools\Graphviz\*"
+appveyor PushArtifact "Graphviz.7z"
 
+7z.exe a -t7z -r "WebDriver.7z" "C:\Tools\WebDriver\*"
+appveyor PushArtifact "WebDriver.7z"
 
-7z.exe a -t7z -r "OpenSSL 1.0.2u (64-bit).7z" "C:\OpenSSL-Win64\*"
-appveyor PushArtifact "OpenSSL 1.0.2u (64-bit).7z"
+7z.exe a -t7z -r "NuGet.7z" "C:\Tools\NuGet\*"
+appveyor PushArtifact "NuGet.7z"
 
-
-7z.exe a -t7z -r "OpenSSL 1.0.2u (32-bit).7z" "C:\OpenSSL-Win32\*"
-appveyor PushArtifact "OpenSSL 1.0.2u (32-bit).7z"
-
-
+7z.exe a -t7z -r "CMake.7z" "C:\Program Files (x86)\CMake\*"
+appveyor PushArtifact "CMake.7z"
 
 
 
