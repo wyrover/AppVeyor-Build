@@ -19,6 +19,13 @@ echo -----------------------------------------------
 echo dir /a:d /b C:\Qt
 dir /a:d /b C:\Qt
 
+echo -----------------------------------------------
+echo dir /a:d /b C:\Qt\5.15.1
+
+dir /a:d /b C:\Qt\5.15.1
+
+
+
 
 echo -----------------------------------------------
 echo dir /a:d /b C:\Users
@@ -115,6 +122,14 @@ cmake --version
 msbuild /version
 which perl.exe
 which 7z.exe
+which node.exe
+
+
+cd /d C:\
+npm install -g tree-node-cli
+
+
+treee  -L 2 -d -I "node_modules"
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
