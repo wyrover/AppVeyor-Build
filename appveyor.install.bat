@@ -158,6 +158,14 @@ appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
 appveyor PushArtifact JDK_14_(x64).7z
 
 
+7z.exe a -t7z -r NSIS_3.06.1.7z "C:\Program Files (x86)\NSIS\*"
+appveyor PushArtifact NSIS_3.06.1.7z
+
+7z.exe a -t7z -r Inno_Setup_6.7z "C:\Program Files (x86)\Inno Setup 6\*"
+appveyor PushArtifact Inno_Setup_6.7z
+
+
+
 
 ::
 ::
