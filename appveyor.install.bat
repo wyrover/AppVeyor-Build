@@ -126,7 +126,7 @@ which node.exe
 
 
 cd /d C:\
-npm install -g tree-node-cli
+call npm.bat install -g tree-node-cli
 
 
 set PATH=C:\Users\appveyor\AppData\Roaming\npm;%PATH%
