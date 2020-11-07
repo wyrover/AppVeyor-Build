@@ -71,20 +71,20 @@ rem bash --login -c "pacman -S --noconfirm python"
 rem bash --login -c "curl https://bootstrap.pypa.io/get-pip.py | python"
 rem bash --login -c "pip install cram"
 
-set PATH=%premake_dir%;%PATH%;%BOOST_BUILD_PATH%\src\engine\bin.ntx86
-
-git submodule update --init --recursive
-
-
-if [%PLATFORM%] == [x86] call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" x86
-if [%PLATFORM%] == [x86] set BOOST_LIBRARYDIR=%BOOST_LIBRARYDIR_WIN32%
-if [%PLATFORM%] == [x86] set CMAKE_GENERATOR=Visual Studio 14 2015    
-    
-
-
-if [%PLATFORM%] == [x64] call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" amd64
-if [%PLATFORM%] == [x64] set BOOST_LIBRARYDIR=%BOOST_LIBRARYDIR_WIN64%   
-if [%PLATFORM%] == [x64] set CMAKE_GENERATOR=Visual Studio 14 2015 Win64   
+::set PATH=%premake_dir%;%PATH%;%BOOST_BUILD_PATH%\src\engine\bin.ntx86
+::
+::git submodule update --init --recursive
+::
+::
+::if [%PLATFORM%] == [x86] call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" x86
+::if [%PLATFORM%] == [x86] set BOOST_LIBRARYDIR=%BOOST_LIBRARYDIR_WIN32%
+::if [%PLATFORM%] == [x86] set CMAKE_GENERATOR=Visual Studio 14 2015    
+::    
+::
+::
+::if [%PLATFORM%] == [x64] call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" amd64
+::if [%PLATFORM%] == [x64] set BOOST_LIBRARYDIR=%BOOST_LIBRARYDIR_WIN64%   
+::if [%PLATFORM%] == [x64] set CMAKE_GENERATOR=Visual Studio 14 2015 Win64   
 
 
 rem wget https://github.com/mlocati/gettext-iconv-windows/releases/download/v0.19.8.1-v1.14/gettext0.19.8.1-iconv1.14-shared-32.zip
@@ -148,21 +148,37 @@ set PATH=%QT5%\bin;%PATH%
 
 
 
-7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
-appveyor PushArtifact JDK_1.8_Update_221_(x86).7z
+::7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
+::appveyor PushArtifact JDK_1.8_Update_221_(x86).7z
+::
+::7z.exe a -t7z -r JDK_1.8_Update_221_(x64).7z "C:\Program Files\Java\jdk1.8.0\*"
+::appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
 
-7z.exe a -t7z -r JDK_1.8_Update_221_(x64).7z "C:\Program Files\Java\jdk1.8.0\*"
-appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
-
-7z.exe a -t7z -r JDK_12_(x64).7z "C:\Program Files\Java\jdk14\*"
+7z.exe a -t7z -r JDK_14_(x64).7z "C:\Program Files\Java\jdk14\*"
 appveyor PushArtifact JDK_14_(x64).7z
 
 
-7z.exe a -t7z -r NSIS_3.06.1.7z "C:\Program Files (x86)\NSIS\*"
-appveyor PushArtifact NSIS_3.06.1.7z
+7z.exe a -t7z -r "NSIS 3.06.1.7z" "C:\Program Files (x86)\NSIS\*"
+appveyor PushArtifact "NSIS 3.06.1.7z"
 
-7z.exe a -t7z -r Inno_Setup_6.7z "C:\Program Files (x86)\Inno Setup 6\*"
-appveyor PushArtifact Inno_Setup_6.7z
+7z.exe a -t7z -r "InnoSetup 6.0.2 Unicode.7z" "C:\Program Files (x86)\Inno Setup 6\*"
+appveyor PushArtifact "InnoSetup 6.0.2 Unicode.7z"
+
+
+7z.exe a -t7z -r "OpenSSL 1.1.1h (64-bit).7z" "C:\OpenSSL-v111-Win64\*"
+appveyor PushArtifact "OpenSSL 1.1.1h (64-bit).7z"
+
+7z.exe a -t7z -r "OpenSSL 1.1.1h (32-bit).7z" "C:\OpenSSL-v111-Win32\*"
+appveyor PushArtifact "OpenSSL 1.1.1h (32-bit).7z"
+
+
+7z.exe a -t7z -r "OpenSSL 1.0.2u (64-bit).7z" "C:\OpenSSL-Win64\*"
+appveyor PushArtifact "OpenSSL 1.0.2u (64-bit).7z"
+
+
+7z.exe a -t7z -r "OpenSSL 1.0.2u (32-bit).7z" "C:\OpenSSL-Win32\*"
+appveyor PushArtifact "OpenSSL 1.0.2u (32-bit).7z"
+
 
 
 
