@@ -86,7 +86,7 @@ echo dir /a:d /b "C:\Program Files"
 dir /a:d /b "C:\Program Files"  
 
 
-echo -----------------------------------------------
+
 
 set ROOT_DIRECTORY=%CD%
 cd %ROOT_DIRECTORY%
@@ -98,12 +98,19 @@ set PATH=C:\msys64\usr\bin;%PATH%
 set PATH=C:\msys64\mingw64\bin;%PATH%
 
 REM echo useful info
-bash --login -c "env"
+
 echo -----------------------------------------------
+echo bash --login -c "env"
+bash --login -c "env"
+
+echo -----------------------------------------------
+echo bash --login -c "echo $PATH"
 bash --login -c "echo $PATH"
 
 echo -----------------------------------------------
+echo bash --login -c "pacman -Q"
 bash --login -c "pacman -Q"
+
 echo -----------------------------------------------
 
 rem bash --login -c "pacman -S --noconfirm python"
@@ -268,14 +275,14 @@ set PATH=%QT5%\bin;%PATH%
 ::7z.exe a -t7z -r "Qt_5.15.1_msvc2019_64.7z" "C:\Qt\5.15.1\msvc2019_64\*"
 ::appveyor PushArtifact "Qt_5.15.1_msvc2019_64.7z"
 
-7z.exe a -t7z -r "Qt_Examples.7z" "C:\Qt\Examples\" 
-appveyor PushArtifact "Qt_Examples.7z"
-
-7z.exe a -t7z -r "Qt_Tools.7z" "C:\Qt\Tools\" 
-appveyor PushArtifact "Qt_Tools.7z"
-
-7z.exe a -t7z -r "Qt_Docs.7z" "C:\Qt\Docs\" 
-appveyor PushArtifact "Qt_Docs.7z"
+::7z.exe a -t7z -r "Qt_Examples.7z" "C:\Qt\Examples\" 
+::appveyor PushArtifact "Qt_Examples.7z"
+::
+::7z.exe a -t7z -r "Qt_Tools.7z" "C:\Qt\Tools\" 
+::appveyor PushArtifact "Qt_Tools.7z"
+::
+::7z.exe a -t7z -r "Qt_Docs.7z" "C:\Qt\Docs\" 
+::appveyor PushArtifact "Qt_Docs.7z"
 
 
 
@@ -290,22 +297,22 @@ appveyor PushArtifact "Qt_Docs.7z"
 ::
 ::
 ::
-:::: Win SDK
-::
-::
-::
-::7z.exe a -t7z -r "Microsoft SDKs v7.1A.7z" "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\*"
-::appveyor PushArtifact "Microsoft SDKs v7.1A.7z"
-::
-::
-:::: MySQL
-::
-::7z.exe a -t7z -r "MySQL Server 5.7.7z" "C:\Program Files\MySQL\MySQL Server 5.7\*"
-::appveyor PushArtifact "MySQL Server 5.7.7z"
-::
-::
-::7z.exe a -t7z -r "PostgreSQL 12.1 x64.7z" "C:\Program Files\PostgreSQL\12\*"
-::appveyor PushArtifact "PostgreSQL 12.1 x64.7z"
+:: Win SDK
+
+
+
+7z.exe a -t7z -r "Microsoft SDKs v7.1A.7z" "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\*"
+appveyor PushArtifact "Microsoft SDKs v7.1A.7z"
+
+
+:: MySQL
+
+7z.exe a -t7z -r "MySQL Server 5.7.7z" "C:\Program Files\MySQL\MySQL Server 5.7\*"
+appveyor PushArtifact "MySQL Server 5.7.7z"
+
+
+7z.exe a -t7z -r "PostgreSQL 12.1 x64.7z" "C:\Program Files\PostgreSQL\12\*"
+appveyor PushArtifact "PostgreSQL 12.1 x64.7z"
 
 
 
