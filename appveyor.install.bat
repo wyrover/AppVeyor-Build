@@ -140,7 +140,7 @@ dir "C:\Users\appveyor\AppData\Roaming\npm"
 
 
 
-treee -l 2 
+treee -d -l 5 --ignore 'node_modules/, .git/, .gitignore'
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
