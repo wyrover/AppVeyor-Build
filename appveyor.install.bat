@@ -125,22 +125,10 @@ which 7z.exe
 which node.exe
 
 
-cd /d C:\
-call C:\projects\appveyor-build\npm-install.bat 
-
-
-
-
-
-echo -----------------------------------------------
-
-dir "C:\Users\appveyor\AppData\Roaming\npm" 
-
-
-
-
-
-treee -d -l 5 --ignore 'node_modules/, .git/, .gitignore'
+::cd /d C:\
+::call C:\projects\appveyor-build\npm-install.bat 
+::dir "C:\Users\appveyor\AppData\Roaming\npm" 
+::treee -d -l 5 --ignore 'node_modules/, .git/, .gitignore'
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
@@ -255,10 +243,18 @@ set PATH=%QT5%\bin;%PATH%
 
 
 :: Qt
-::7z.exe a -t7z -r "Qt 5.15.1.7z" "C:\Qt\5.15.1\*"
-::appveyor PushArtifact "Qt 5.15.1.7z"
+7z.exe a -t7z -r "Qt_5.15.1_mingw81_32.7z" "C:\Qt\5.15.1\mingw81_32\*"
+appveyor PushArtifact "Qt_5.15.1_mingw81_32.7z"
+
+7z.exe a -t7z -r "Qt_5.15.1_mingw81_64.7z" "C:\Qt\5.15.1\mingw81_64\*"
+appveyor PushArtifact "Qt_5.15.1_mingw81_64.7z"
 
 
+7z.exe a -t7z -r "Qt_5.15.1_msvc2019.7z" "C:\Qt\5.15.1\msvc2019\*"
+appveyor PushArtifact "Qt_5.15.1_msvc2019.7z"
+
+7z.exe a -t7z -r "Qt_5.15.1_msvc2019_64.7z" "C:\Qt\5.15.1\msvc2019_64\*"
+appveyor PushArtifact "Qt_5.15.1_msvc2019_64.7z"
 
 
 ::
