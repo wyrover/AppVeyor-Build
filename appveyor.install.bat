@@ -129,8 +129,10 @@ cd /d C:\
 npm install -g tree-node-cli
 
 
-set PATH=C:\Users\%USERNAME%\AppData\Roaming\npm\;%PATH%
+set PATH=C:\Users\appveyor\AppData\Roaming\npm\;%PATH%
 
+which tree 
+which treee 
 
 treee  -L 2 -d -I "node_modules"
 
