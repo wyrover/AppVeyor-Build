@@ -16,6 +16,27 @@ dir /a:d /b C:\Libraries
 
 
 echo -----------------------------------------------
+echo dir /a:d /b C:\Qt
+dir /a:d /b C:\Qt
+
+
+echo -----------------------------------------------
+echo dir /a:d /b C:\Users
+dir /a:d /b C:\Users
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Documents and Settings"
+dir /a:d /b "C:\Documents and Settings"
+
+echo -----------------------------------------------
+echo dir /a:d /b C:\WSL
+dir /a:d /b C:\WSL
+
+
+
+
+
+echo -----------------------------------------------
 echo dir /a:d /b C:\Tools
 dir /a:d /b C:\Tools
 
@@ -25,8 +46,8 @@ echo dir /a:d /b C:\WinDDK
 dir /a:d /b C:\WinDDK
 
 echo -----------------------------------------------
-echo dir /a:d /b C:\Users
-dir /a:d /b C:\Users
+echo dir /a:d /b C:\Users\appveyor
+dir /a:d /b C:\Users\appveyor
 
 echo -----------------------------------------------
 echo dir /a:d /b "C:\Program Files (x86)\Java"
@@ -179,32 +200,38 @@ set PATH=%QT5%\bin;%PATH%
 ::7z.exe a -t7z -r "OpenSSL 1.0.2u (32-bit).7z" "C:\OpenSSL-Win32\*"
 ::appveyor PushArtifact "OpenSSL 1.0.2u (32-bit).7z"
 
-7z.exe a -t7z -r "boost_1_73_0.7z" "C:\Libraries\boost_1_73_0\*"
-appveyor PushArtifact "boost_1_73_0.7z"
+::7z.exe a -t7z -r "boost_1_73_0.7z" "C:\Libraries\boost_1_73_0\*"
+::appveyor PushArtifact "boost_1_73_0.7z"
+::
+::7z.exe a -t7z -r "LLVM 10.0.0 x64.7z" "C:\Program Files\LLVM\*"
+::appveyor PushArtifact "LLVM 10.0.0 x64.7z"
+::
+::7z.exe a -t7z -r "DirectX SDK.7z" "C:\Program Files (x86)\Microsoft DirectX SDK\*"
+::appveyor PushArtifact "DirectX SDK.7z"
+::
+::7z.exe a -t7z -r "vcpkg.7z" "C:\Tools\vcpkg\*"
+::appveyor PushArtifact "vcpkg.7z"
+::
+::7z.exe a -t7z -r "Doxygen.7z" "C:\Tools\Doxygen\*"
+::appveyor PushArtifact "Doxygen.7z"
+::
+::7z.exe a -t7z -r "Graphviz.7z" "C:\Tools\Graphviz\*"
+::appveyor PushArtifact "Graphviz.7z"
+::
+::7z.exe a -t7z -r "WebDriver.7z" "C:\Tools\WebDriver\*"
+::appveyor PushArtifact "WebDriver.7z"
+::
+::7z.exe a -t7z -r "NuGet.7z" "C:\Tools\NuGet\*"
+::appveyor PushArtifact "NuGet.7z"
+::
+::7z.exe a -t7z -r "CMake.7z" "C:\Program Files (x86)\CMake\*"
+::appveyor PushArtifact "CMake.7z"
 
-7z.exe a -t7z -r "LLVM 10.0.0 x64.7z" "C:\Program Files\LLVM\*"
-appveyor PushArtifact "LLVM 10.0.0 x64.7z"
 
-7z.exe a -t7z -r "DirectX SDK.7z" "C:\Program Files (x86)\Microsoft DirectX SDK\*"
-appveyor PushArtifact "DirectX SDK.7z"
+:: Qt
+::7z.exe a -t7z -r "Qt 5.15.1.7z" "C:\Qt\5.15.1\*"
+::appveyor PushArtifact "Qt 5.15.1.7z"
 
-7z.exe a -t7z -r "vcpkg.7z" "C:\Tools\vcpkg\*"
-appveyor PushArtifact "vcpkg.7z"
-
-7z.exe a -t7z -r "Doxygen.7z" "C:\Tools\Doxygen\*"
-appveyor PushArtifact "Doxygen.7z"
-
-7z.exe a -t7z -r "Graphviz.7z" "C:\Tools\Graphviz\*"
-appveyor PushArtifact "Graphviz.7z"
-
-7z.exe a -t7z -r "WebDriver.7z" "C:\Tools\WebDriver\*"
-appveyor PushArtifact "WebDriver.7z"
-
-7z.exe a -t7z -r "NuGet.7z" "C:\Tools\NuGet\*"
-appveyor PushArtifact "NuGet.7z"
-
-7z.exe a -t7z -r "CMake.7z" "C:\Program Files (x86)\CMake\*"
-appveyor PushArtifact "CMake.7z"
 
 
 
