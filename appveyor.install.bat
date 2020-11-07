@@ -289,30 +289,30 @@ set PATH=%QT5%\bin;%PATH%
 
 
 :: Android
-::7z.exe a -t7z -r "Android.7z" "C:\Program Files (x86)\Android\*"
-::appveyor PushArtifact "Android.7z"
-::
-::7z.exe a -t7z -r "Maven.7z" "C:\Program Files (x86)\Apache\Maven\*"
-::appveyor PushArtifact "Maven.7z"
-::
-::
-::
+7z.exe a -t7z -r "Android.7z" "C:\Program Files (x86)\Android\*"
+appveyor PushArtifact "Android.7z"
+
+7z.exe a -t7z -r "Maven.7z" "C:\Program Files (x86)\Apache\Maven\*"
+appveyor PushArtifact "Maven.7z"
+
+
+
 :: Win SDK
 
 
 
-7z.exe a -t7z -r "Microsoft SDKs v7.1A.7z" "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\*"
-appveyor PushArtifact "Microsoft SDKs v7.1A.7z"
-
-
-:: MySQL
-
-7z.exe a -t7z -r "MySQL Server 5.7.7z" "C:\Program Files\MySQL\MySQL Server 5.7\*"
-appveyor PushArtifact "MySQL Server 5.7.7z"
-
-
-7z.exe a -t7z -r "PostgreSQL 12.1 x64.7z" "C:\Program Files\PostgreSQL\12\*"
-appveyor PushArtifact "PostgreSQL 12.1 x64.7z"
+::7z.exe a -t7z -r "Microsoft SDKs v7.1A.7z" "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\*"
+::appveyor PushArtifact "Microsoft SDKs v7.1A.7z"
+::
+::
+:::: MySQL
+::
+::7z.exe a -t7z -r "MySQL Server 5.7.7z" "C:\Program Files\MySQL\MySQL Server 5.7\*"
+::appveyor PushArtifact "MySQL Server 5.7.7z"
+::
+::
+::7z.exe a -t7z -r "PostgreSQL 12.1 x64.7z" "C:\Program Files\PostgreSQL\12\*"
+::appveyor PushArtifact "PostgreSQL 12.1 x64.7z"
 
 
 
