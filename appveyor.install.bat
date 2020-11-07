@@ -129,17 +129,19 @@ cd /d C:\
 call C:\projects\appveyor-build\npm-install.bat 
 
 
-set PATH=C:\Users\appveyor\AppData\Roaming\npm;%PATH%
+
 
 
 echo -----------------------------------------------
-echo dir /a:d /b "C:\Users\appveyor\AppData\Roaming\npm" 
-dir /a:d /b "C:\Users\appveyor\AppData\Roaming\npm"  
+
+dir "C:\Users\appveyor\AppData\Roaming\npm" 
+
+
 
 which tree 
 which treee 
 
-treee  -L 2 -d -I "pagefile"
+npx treee  -L 2 -d -I "pagefile"
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
